@@ -29,6 +29,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    compileOnly "com.google.code.findbugs:jsr305:${jsr305Version}"
 }
 
 apply from: '../publish.gradle'
