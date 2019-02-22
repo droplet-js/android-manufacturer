@@ -1,5 +1,8 @@
 # android-manufacturer
 
+[![Build Status](https://cloud.drone.io/api/badges/v7lin/android-manufacturer/status.svg)](https://cloud.drone.io/v7lin/android-manufacturer)
+[ ![Download](https://api.bintray.com/packages/v7lin/maven/manufacturer-android/images/download.svg) ](https://bintray.com/v7lin/maven/manufacturer-android/_latestVersion)
+
 ### snapshot
 
 ````
