@@ -1,12 +1,18 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion androidCompileSdkVersion
+    compileSdkVersion 25
     buildToolsVersion androidBuildToolsVersion
 
     compileOptions {
         sourceCompatibility sourceCompatibilityVersion
         targetCompatibility targetCompatibilityVersion
+    }
+
+    lintOptions {
+        textOutput 'stdout'
+        textReport true
+        lintConfig rootProject.file('lint.xml')
     }
 
     defaultConfig {

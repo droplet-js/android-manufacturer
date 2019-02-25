@@ -23,7 +23,8 @@ public class MIUI {
             Class<?> c = Class.forName("android.os.SystemProperties");
             Method m = c.getDeclaredMethod("get", String.class, String.class);
             m.setAccessible(true);
-            String property = (String) m.invoke(null, KEY_MIUI_VERSION_NAME, "");//SystemProperties.get(KEY_MIUI_VERSION_NAME, "");
+            // SystemProperties.get(KEY_MIUI_VERSION_NAME, "");
+            String property = (String) m.invoke(null, KEY_MIUI_VERSION_NAME, "");
             return !TextUtils.isEmpty(property);
         } catch (ClassNotFoundException e) {
         } catch (NoSuchMethodException e) {
@@ -38,7 +39,8 @@ public class MIUI {
             Class<?> c = Class.forName("android.os.SystemProperties");
             Method m = c.getDeclaredMethod("getInt", String.class, int.class);
             m.setAccessible(true);
-            int property = (int) m.invoke(null, KEY_MIUI_VERSION_CODE, MIUI_UNKNOWN);//SystemProperties.get(KEY_MIUI_VERSION_NAME, "");
+            // SystemProperties.getInt(KEY_MIUI_VERSION_CODE, MIUI_UNKNOWN);
+            int property = (int) m.invoke(null, KEY_MIUI_VERSION_CODE, MIUI_UNKNOWN);
             return property;
         } catch (ClassNotFoundException e) {
         } catch (NoSuchMethodException e) {
@@ -53,7 +55,8 @@ public class MIUI {
             Class<?> c = Class.forName("android.os.SystemProperties");
             Method m = c.getDeclaredMethod("getInt", String.class, int.class);
             m.setAccessible(true);
-            int property = (int) m.invoke(null, KEY_MIUI_NOTCH, 0);// SystemProperties.getInt(KEY_MIUI_NOTCH, 0)
+            // SystemProperties.getInt(KEY_MIUI_NOTCH, 0)
+            int property = (int) m.invoke(null, KEY_MIUI_NOTCH, 0);
             return property == 1;
         } catch (ClassNotFoundException e) {
         } catch (NoSuchMethodException e) {

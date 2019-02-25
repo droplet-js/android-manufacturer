@@ -31,9 +31,12 @@ public enum Manufacturer {
     public static Manufacturer recognizer() {
         Manufacturer recognizer = UNKNOWN;
         for (Manufacturer manufacturer : Manufacturer.values()) {
-            if (manufacturer != UNKNOWN && TextUtils.equals(manufacturer.manufacturer, Build.MANUFACTURER.toLowerCase(Locale.getDefault()))) {
-                recognizer = manufacturer;
-                break;
+            if (manufacturer != UNKNOWN) {
+                if (TextUtils.equals(manufacturer.manufacturer,
+                        Build.MANUFACTURER.toLowerCase(Locale.getDefault()))) {
+                    recognizer = manufacturer;
+                    break;
+                }
             }
         }
         return recognizer;
