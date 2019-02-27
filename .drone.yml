@@ -35,6 +35,8 @@ steps:
   commands:
   - ./gradlew :manufacturer-android:clean :manufacturer-android:install :manufacturer-android:artifactoryPublish
   when:
+    branch:
+    - master
     event:
     - push
 
