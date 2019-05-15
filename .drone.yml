@@ -31,7 +31,7 @@ steps:
     BINTRAY_API_KEY:
       from_secret: BINTRAY_API_KEY
     VERSION_CODE: ${DRONE_BUILD_NUMBER}
-    VERSION_NAME: 0.0.1-SNAPSHOT
+    VERSION_NAME: 0.0.2-SNAPSHOT
   commands:
   - ./gradlew :manufacturer-android:clean :manufacturer-android:install :manufacturer-android:artifactoryPublish
   when:
@@ -52,7 +52,7 @@ steps:
     BINTRAY_API_KEY:
       from_secret: BINTRAY_API_KEY
     VERSION_CODE: ${DRONE_BUILD_NUMBER}
-    VERSION_NAME: 0.0.1
+    VERSION_NAME: 0.0.2
   commands:
   - ./gradlew :manufacturer-android:clean :manufacturer-android:install :manufacturer-android:bintrayUpload
   when:
